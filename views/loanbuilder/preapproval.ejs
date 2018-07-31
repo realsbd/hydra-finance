@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Hydra | FUNDING</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/loanbuilder/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/loanbuilder/css/main.css">
+    <link rel="icon" type="image/png" href="/assets/loanbuilder/favicon.png" />
+
+    <script src="/assets/loanbuilder/js/jquery-3.2.1.min.js"></script>
+    <script src="/assets/loanbuilder/js/bootstrap.min.js"></script>
+    <script src="/assets/loanbuilder/js/bootstrap-custom.js"></script>
+    <script src="/assets/loanbuilder/js/jquery.main.js"></script>
+    <script src="/assets/loanbuilder/js/hydra.js"></script>
+
+
+</head>
+<body>
+    
+    <div id="wrapper">
+        <header class="header-inner">
+            <div class="container container-normal">
+                <div class="logo">
+                    <a href="#">
+                        <img src="/assets/loanbuilder/img/logo-inner.svg" alt="">
+                    </a>
+                </div>
+                <div class="slogan">
+                                            <p><strong>You have been pre-approved!</strong></p>
+                                    </div>
+            </div>
+        </header>
+
+
+
+        <script>
+
+$(document).ready(function() {
+    console.log('In Page Action')
+    jsonobj = JSON.parse('{"requested_amount":"$ 1,000","monthly_revenue":"$ 100,000","personal_credit":"6-10 years","business_credit":"6-10 years","fico_score":"600-649","time_in_business":"4 - 6 years","available_credit":"$5,000-$9,999","applied_for_credit":"Twice","industry":"Business Services","score":{"fx":-0.7597,"odds":2.1376348338435,"lb_score":559.48393275365},"fx":-0.7597,"odds":2.1376348338435,"lb_score":559.48393275365,"product":{"tier":3,"max_term":"6","interest":".60","ptd":".15","weeks":"26","max_payment":3461.5384615385,"max_loan_amount":56250,"total_due":90000},"tier":3,"max_term":"6","interest":".60","ptd":".15","weeks":"26","max_payment":3461.5384615385,"max_loan_amount":56250,"total_due":90000}');
+
+    $('#debug').on('click', function(){
+        console.dir(jsonobj)
+    });
+
+});
+
+</script>
+
+
+<div id="main">
+            <section class="section section-approved">
+                <div class="container container-normal">
+                    <div class="block-approved">
+                        <div class="images">
+                            <img src="/assets/loanbuilder/images/ico_circle_get02.svg" width="150" height="150" alt="">
+                        </div>
+                        <div class="description">
+                            <h2>You are pre-approved for <span>$56,200.00</span>!</h2>
+                        </div>
+                    </div>
+                    <div class="info add">
+                        <div class="description">
+                            <h3>Congratulations, you have been pre-approved for a Hydra small business loan!</h3>
+                            <p><strong>Pretty easy, right?</strong> Now we just need a bit more information about you and your business. This will allow us to determine if you are eligible for an even higher loan amount or lower rate.</p>
+                            <p>With just a few clicks, we can finalize your loan offer, instantly verify your banking information, and get you back to the business of running your business.</p>
+                            <div class="hold">
+                                <a class="btn btn-primary btn-border btn-min anchor-link" href="#next-anchor">NEXT STEP</a>
+                            </div>
+                        </div>
+                        <div class="panel-form">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Your Pre-Approved Loan Offer  <span id="debug" style="float:right; font-size:8px; cursor:pointer">O</span></div>
+                                <div class="panel-content">
+                                    <table class="table table-striped">
+                                        <tbody>
+                                            <tr>
+                                                <td>Loan Amount:</td>
+                                                <td><span class="price-order">$56,200.00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Loan Term:</td>
+                                                <td><span class="price-order">6 months</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Payments:</td>
+                                                <td><span class="price-order">$3,461.54 / week</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="next-anchor" class="section section-main">
+                <div class="container container-normal">
+                    <ul class="nav nav-tabs tabs-style">
+                        <li class="active"><span>General Information</span></li>
+                        <li><span>Business Information</span></li>
+                        <li><span>Personal Information</span></li>
+                        <li><span>Bank Verification</span></li>
+                    </ul>
+                    <div class="content-info">
+                        <div class="content-holder">
+        
+                            <!-- step-1-->
+                            <div class="step-tab step-1">
+                                <h3 class="ttl">To complete your application, we need some additional information about you and your business.</h3>
+                                <div class="box box-add">
+                                    <form class="form-validate-me" action="/loanbuilder/preapproval" method="post" id="form_step">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="input">
+                                                        <div class="ttl-label">
+                                                            <label for="inputName">First Name</label>
+                                                            <div class="help-block with-errors"></div>
+                                                        </div>
+                                                        <input type="text" class="form-control" name="first_name" id="inputName" data-error="Please provide first name." placeholder="" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="input">
+                                                        <div class="ttl-label">
+                                                            <label for="inputLName">Last Name</label>
+                                                            <div class="help-block with-errors"></div>
+                                                        </div>
+                                                        <input type="text" class="form-control" name="last_name" id="inputLName" data-error="Please provide last name." placeholder="" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="input">
+                                                        <div class="ttl-label">
+                                                            <label for="inputEmail">Email*</label>
+                                                            <div class="help-block with-errors"></div>
+                                                        </div>
+                                                        <input type="email" class="form-control" name="email" id="inputEmail" pattern=".*@\w{2,}\.\w{2,}" data-error="Please provide valid email." placeholder="" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="input">
+                                                        <div class="ttl-label">
+                                                            <label for="inputPhone">Cell Phone</label>
+                                                            <div class="help-block with-errors"></div>
+                                                        </div>
+                                                        <input type="text" data-phone="true"  name="cell_phone" class="form-control" placeholder="(555) 555-5555" data-inputmask="'mask': '(999) 999-9999'" id="inputPhone" data-error="Please provide phone number." required="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="input">
+                                                        <div class="ttl-label">
+                                                            <label for="inputBName">Business Name</label>
+                                                            <div class="help-block with-errors"></div>
+                                                        </div>
+                                                        <input type="text" class="form-control" name="business_name" id="inputBName" placeholder="" data-error="Please provide business name." required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group terms">
+                                            <div class="checkbox">
+                                                <input type="checkbox" name="terms_and_conditions" id="check_terms" data-error="Please accept terms and conditions to continue." required>
+                                                <label for="check_terms" target="_new">I agree to Hydra’s <a href="/page/terms" target="_new">Terms and Conditions</a>, <a href="/page/privacy" target="_new">Privacy Policy</a>, and <a href="/page/e_sign" target="_new">E-sign Consent Agreement</a>. I also agree to be contacted by a Hydra loan consultant.</label>
+                                            </div>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="btn-holder">
+                                            <button type="submit" class="btn btn-primary" id="generic_next">Next</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- end step-1-->
+
+                        </div>
+                        <div class="col-info">
+                            <ul class="list-advice list-advice-add">
+                                <li>
+                                    <div class="ico">
+                                        <img src="/assets/loanbuilder/images/ico_fast_blue.svg" width="50" height="50" alt="">
+                                    </div>
+                                    <div class="description">
+                                        <h4>Fast</h4>
+                                        <p>Apply in minutes<br> Funding as soon as 24 hours</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ico">
+                                        <img src="/assets/loanbuilder/images/ico_flexible_blue.svg" width="39" height="39" alt="">
+                                    </div>
+                                    <div class="description">
+                                        <h4>Flexible</h4>
+                                        <p>From $5,000 to $500,000<br> Terms up to 12 months</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ico">
+                                    <img src="/assets/loanbuilder/images/ico_simple_blue.svg" width="50" height="50" alt=""> 
+                                    </div>
+                                    <div class="description">
+                                        <h4>Simple</h4>
+                                        <p>Competitive fixed rates<br> No collateral no surprises</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="access-list">
+                                <li>
+                                    <div class="icon">
+                                        <img src="/assets/loanbuilder/images/ico_lock.svg" width="39" height="50" alt="">
+                                    </div>
+                                    <p>We care about your privacy and use<br> high-level security to protect your information</p>
+                                </li>
+                                <li>
+                                    <img src="/assets/loanbuilder/images/logo_bbb.png" srcset="/assets/loanbuilder/images/logo_bbb@2x.png 2x" alt="" width="123" height="44">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+        
+    <footer class="footer">
+        <div class="footer-holder">
+            <div class="container">
+                <div class="text">
+                    <p>Loans subject to Lender Approval Depending on the state where your business is located and other attributes of the loan, your business loan may be issued by Lead Bank, a Missouri-Chartered Bank. Member FDIC. Your loan agreement will identify the loan issuer prior to your signing. Requires credit approval The lender transfers funds to your bank account as fast as the next business day if the lender has received the documents the lender asked for and approved the loan by 3:30 p.m. Central Time. Monday through Friday (excluding bank holidays).</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-holder">
+            <div class="container">
+                <div class="block-contact">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="/assets/loanbuilder/img/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <address>
+                        <span>2310 W. 75th Street</span>
+                        <span>Prairie Village, KS 66208</span>
+                        <span><a href="tel:1-800-688-2418">1-800-688-2418</a></span>
+                        <span><a href="mailto:&#105;&#110;&#102;&#111;&#064;&#104;&#121;&#112;&#104;&#101;&#110;&#102;&#117;&#110;&#100;&#105;&#110;&#103;&#046;&#099;&#111;&#109;">&#105;&#110;&#102;&#111;&#064;&#104;&#121;&#112;&#104;&#101;&#110;&#102;&#117;&#110;&#100;&#105;&#110;&#103;&#046;&#099;&#111;&#109;</a></span>
+                    </address>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Hydra | FUNDING</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/loanbuilder/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/loanbuilder/css/main.css">
+    <link rel="icon" type="image/png" href="../assets/loanbuilder/favicon.png" />
+</head>
+<body>
+		    
+    <div id="wrapper">
+        <header id="header" class="header-mobile">
+            <div class="container container-normal">
+                <div class="logo">
+                    <a href="#">
+                        <img src="../assets/loanbuilder/images/logo.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <div class="main-holder">
+                <div class="container-fluid">
+                    <ul class="nav nav-tabs tabs-style">
+                        <li class="active"><span>General Information</span></li>
+                        <li class=""><span>Business Information</span></li>
+                        <li class=""><span>Personal Information</span></li>
+                        <li class=""><span>Review</span></li>
+                    </ul>
+                    <div class="content-holder">
+
+                           <!-- step-1-->
+                        <div class="step-tab step-1">
+                            <h3 class="ttl">To start, we need some basic information about you and your business.</h3>
+                            <div class="box">
+                                <form class="form-validate-me" action="/app/general_information" method="post" id="form_step">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <div class="input">
+                                                        <div class="ttl-label">
+                                                            <label for="inputName">First Name</label>
+                                                            <div class="help-block with-errors"></div>
+                                                        </div>
+                                                        <input type="text" name="first_name" class="form-control" id="inputName" data-error="Please provide first name." placeholder="" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <div class="input">
+                                                        <div class="ttl-label">
+                                                            <label for="inputLName">Last Name</label>
+                                                            <div class="help-block with-errors"></div>
+                                                        </div>
+                                                        <input type="text" name="last_name" class="form-control" id="inputLName" data-error="Please provide last name." placeholder="" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input">
+                                                    <div class="ttl-label">
+                                                        <label for="inputEmail">Email*</label>
+                                                        <div class="help-block with-errors"></div>
+                                                    </div>
+                                                    <input type="email" name="email" class="form-control" id="inputEmail" pattern=".*@\w{2,}\.\w{2,}" data-error="Please provide valid email." placeholder="" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input">
+                                                    <div class="ttl-label">
+                                                        <label for="inputPhone">Cell Phone</label>
+                                                        <div class="help-block with-errors"></div>
+                                                    </div>
+                                                    <input type="phone" name="cell_phone" data-phone="true" class="form-control" data-inputmask="'mask': '(999) 999-9999'" placeholder="(555) 555-5555" id="inputPhone" data-error="Please provide phone number." required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input">
+                                                    <div class="ttl-label">
+                                                        <label for="inputBName">Business Name</label>
+                                                        <div class="help-block with-errors"></div>
+                                                    </div>
+                                                    <input type="text" name="business_name" class="form-control" id="inputBName" placeholder="" data-error="Please provide business name." required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input">
+                                                    <div class="ttl-label">
+                                                        <label for="inputAverage">Average Monthly Revenue</label>
+                                                        <div class="help-block with-errors"></div>
+                                                    </div>
+                                                    <input type="text" name="monthly_revenue" class="form-control" data-money="true" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'autoGroup': true, 'digits': 0, 'digitsOptional': false, 'prefix': '$ ', 'placeholder': '', 'rightAlign': false, 'repeat': '6'" data-error="Please provide monthly revenue." id="inputAverage" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="bootstrap-select">
+                                            <div class="ttl-label">
+                                                <label for="selectTimeBusiness">Time in Business</label>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                            <select class="selectpicker" name="time_in_business" id="selectTimeBusiness" data-error="Please select time in business." required>
+                                                <option value=""></option>
+                                                <option value="Less than One Year">Less than One Year</option>
+                                                <option value="1-3 Years">1-3 Years</option>
+                                                <option value="4-6 Years">4-6 Years</option>
+                                                <option value="7-12 Years">7-12 years</option>
+                                                <option value="13 Years or More">13 Years or More</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="bootstrap-select">
+                                            <div class="ttl-label">
+                                                <label for="selectBusiness">Business Industry</label>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                            <select class="selectpicker" name="industry" id="selectBusiness" data-error="Please provide time in business." required>
+                                                <option value=""></option>
+                                                <option value="Administrative Support">Administrative Support</option>
+                                                <option value="Agriculture">Agriculture</option>
+                                                <option value="Arts, Entertainment &amp; Recreation">Arts, Entertainment &amp; Recreation</option>
+                                                <option value="Automobile Dealers">Automobile Dealers</option>
+                                                <option value="Automotive Repair &amp; Maintenance">Automotive Repair &amp; Maintenance</option>
+                                                <option value="Business Services">Business Services</option>
+                                                <option value="Construction">Construction</option>
+                                                <option value="Educational Services">Educational Services</option>
+                                                <option value="Finance &amp; Insurance">Finance &amp; Insurance</option>
+                                                <option value="Forestry, Fishing, Hunting">Forestry, Fishing, Hunting</option>
+                                                <option value="Freight Trucking">Freight Trucking</option>
+                                                <option value="Gambling">Gambling</option>
+                                                <option value="Gas Stations">Gas Stations</option>
+                                                <option value="Greenhouse, Nursery, Floriculture">Greenhouse, Nursery, Floriculture</option>
+                                                <option value="Healthcare &amp; Social Assistance">Healthcare &amp; Social Assistance</option>
+                                                <option value="Hotels &amp; Travel Accommodations">Hotels &amp; Travel Accommodations</option>
+                                                <option value="Information &amp; Technology">Information &amp; Technology</option>
+                                                <option value="Legal Services">Legal Services</option>
+                                                <option value="Management of Companies">Management of Companies</option>
+                                                <option value="Manufacturing">Manufacturing</option>
+                                                <option value="Mining">Mining</option>
+                                                <option value="Non-Profit">Non-Profit</option>
+                                                <option value="Online Retailer">Online Retailer</option>
+                                                <option value="Organizations">Organizations</option>
+                                                <option value="Other Services">Other Services</option>
+                                                <option value="Personal Care Services">Personal Care Services</option>
+                                                <option value="Physician, Dentist, or Health Practitioner">Physician, Dentist, or Health Practitioner</option>
+                                                <option value="Professional, Scientific, and Technical Services">Professional, Scientific, and Technical Services</option>
+                                                <option value="Public Administration">Public Administration</option>
+                                                <option value="Real Estate">Real Estate</option>
+                                                <option value="Religious Institutions">Religious Institutions</option>
+                                                <option value="Rental and Leasing">Rental and Leasing</option>
+                                                <option value="Restaurants and">Restaurants and</option>
+                                                <option value="Food Service">Food Service</option>
+                                                <option value="Retail Stores">Retail Stores</option>
+                                                <option value="Transportation">Transportation</option>
+                                                <option value="Utilities">Utilities</option>
+                                                <option value="Veterinarians">Veterinarians</option>
+                                                <option value="Warehousing and Storage">Warehousing and Storage</option>
+                                                <option value="Waste Management and Remediation Services">Waste Management and Remediation Services</option>
+                                                <option value="Wholesale Trade">Wholesale Trade</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input">
+                                                    <div class="ttl-label">
+                                                        <label for="inputAmount">Amount Requested</label>
+                                                        <div class="help-block with-errors"></div>
+                                                    </div>
+                                                    <input type="text" class="form-control" name="requested_amount" data-money="true" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'autoGroup': true, 'digits': 0, 'digitsOptional': false, 'prefix': '$ ', 'placeholder': '', 'rightAlign': false, 'repeat': '6'" id="inputAmount" data-error="Please provide funding request." placeholder="" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group terms">
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="terms_and_conditions" id="check_terms" data-error="Please accept terms and conditions to continue." required>
+                                            <label for="check_terms">I agree to Hydra’s <a href="../page/terms.html" target="_new">Terms and Conditions</a>, <a href="../page/privacy.html" target="_new">Privacy Policy</a>, and <a href="../page/e_sign.html" target="_new">E-sign Consent Agreement</a>. I also agree to be contacted by a Hydra loan consultant.</label>
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="btn-holder">
+                                        <button type="submit" class="btn btn-primary">Next</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <ul class="access-list">
+                                <li>
+                                    <div class="icon">
+                                        <img src="../assets/loanbuilder/images/ico_lock.svg" width="39" height="50" alt="">
+                                    </div>
+                                    <p>We care about your privacy and use<br> high-level security to protect your information</p>
+                                </li>
+                                <li>
+                                    <img src="../assets/loanbuilder/images/logo_bbb.png" srcset="/assets/loanbuilder/images/logo_bbb@2x.png 2x" alt="" width="140" height="49">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end step-1-->
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include ../partials/frame %>
+    </div>
+    
+    <%- include ../partials/footer %>
+
+    <div class="modal modal-question fade" id="modal-question" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">X</span>
+                    </button>
+                    <div class="question-content">
+                        <span class="ico-question center big">
+                            <span>?</span>
+                        </span>
+                        <h4>How to Find Your Bank Routing Number</h4>
+                        <p>You can find your bank routing number on your
+                        checks and deposit slips, usually on the bottom
+                        left (e.g. ⑆ 123456789 ⑆). You can also find on your
+                        bank’s website, or by contacting your bank directly.</p>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal modal-question fade" id="modal-question-social" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">X</span>
+                    </button>
+                    <div class="question-content">
+                        <span class="ico-question center big">
+                            <span>?</span>
+                        </span>
+                        <h4>Why we need your SSN:</h4>
+                        <p>We need your social security number to verify your identity and run your credit check. We care about your privacy and use high-level security to protect your information.</p>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <script src="../assets/loanbuilder/js/jquery-3.2.1.min.js"></script>
+    <script src="../assets/loanbuilder/js/bootstrap.min.js"></script>
+    <script src="../assets/loanbuilder/js/bootstrap-custom.js"></script>
+    <script src="../assets/loanbuilder/js/jquery.main.js"></script>
+
+    
+
+</body>
+</html>
