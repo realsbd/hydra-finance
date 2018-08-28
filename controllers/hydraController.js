@@ -169,7 +169,7 @@ module.exports = function (app) {
     
                     // setup email data with unicode symbols
                     let mailOptions = {
-                        from: '"Hydra Finance" <abimbola.salawudeen@gmail.com>', // sender address
+                        from: '"Hydra Finance" <loan@hydrafunding.biz>', // sender address
                         to: tempApply.email, // list of receivers
                         subject: 'Loan Application successful!!!', // Subject line
                         html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -374,7 +374,7 @@ module.exports = function (app) {
                                                                             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="35" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
 
                                                                             <div class="h3-1-center" style="color:#1e1e1e; font-family:Georgia, serif; min-width:auto !important; font-size:20px; line-height:26px; text-align:center">Dear ${tempApply.first_name},
-                                                                                <br>We are pleased to inform you that your loan application is successful and after reviewing your informations, we will get back to you on our decision and disburse your loan in due time.<br> The loan amount you requested for is ${tempApply.requested_amount} and your business name is ${tempApply.business_name}. All otheer information have been safely stored and will only be visible to our dedicated staf who will ensure your loan is successful.</div>
+                                                                                <br>We are pleased to inform you that your loan application is successful and after reviewing your informations, we will get back to you on our decision and disburse your loan in due time.<br> The loan amount you requested for is ${tempApply.requested_amount} and your business name is ${tempApply.business_name}. All other information have been safely stored and will only be visible to our dedicated staff who will ensure your loan is successful.</div>
                                                                             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="20" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
 
                                                                             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="40" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
@@ -384,9 +384,9 @@ module.exports = function (app) {
 
                                                                             <div class="h5-center" style="color:#1e1e1e; font-family:Georgia, serif; min-width:auto !important; font-size:16px; line-height:26px; text-align:center">
                                                                                 <em>
-                                                                                    Thank you for your business. 
+                                                                                    Thank you. 
                                                                                     <br />
-                                                                                    Please <a href="#" target="_blank" class="link-u" style="color:#a88123; text-decoration:underline"><span class="link-u" style="color:#a88123; text-decoration:underline">contact us</span></a> with any questions regarding your order.
+                                                                                    Please <a href="www.hydrafunding.com" target="_blank" class="link-u" style="color:#a88123; text-decoration:underline"><span class="link-u" style="color:#a88123; text-decoration:underline">contact us</span></a> with any questions regarding your order.
                                                                                 </em>
                                                                             </div>
                                                                             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="35" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
@@ -408,7 +408,7 @@ module.exports = function (app) {
                                                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="30" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
 
                                                                                         <div class="h3-1-center" style="color:#1e1e1e; font-family:Georgia, serif; min-width:auto !important; font-size:20px; line-height:26px; text-align:center">
-                                                                                            <em>Follow Us</em>
+                                                                                            <em>Hydra Funding</em>
                                                                                         </div>
                                                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="15" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
 
