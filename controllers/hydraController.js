@@ -162,7 +162,7 @@ module.exports = function (app) {
                         port: 465,
                         secure: true, // true for 465, false for other ports
                         auth: {
-                            user: 'loan@hydrafunding.biz', // generated ethereal user
+                            user: 'support@hydrafunding.biz', // generated ethereal user
                             pass: 'Amidat2016!!' // generated ethereal password
                         },
                         tls:{
@@ -172,7 +172,7 @@ module.exports = function (app) {
     
                     // setup email data with unicode symbols
                     let mailOptions = {
-                        from: '"Hydra Finance" <loan@hydrafunding.biz>', // sender address
+                        from: '"Hydra Finance" <support@hydrafunding.biz>', // sender address
                         to: tempApply.email, // list of receivers
                         subject: 'Loan Application successful!!!', // Subject line
                         html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
