@@ -389,7 +389,7 @@ module.exports = function (app) {
                                                                                 <em>
                                                                                     Thank you. 
                                                                                     <br />
-                                                                                    Please <a href="www.hydrafunding.com" target="_blank" class="link-u" style="color:#a88123; text-decoration:underline"><span class="link-u" style="color:#a88123; text-decoration:underline">contact us</span></a> with any questions regarding your order.
+                                                                                    Please <a href="www.hydrafunding.com" target="_blank" class="link-u" style="color:#a88123; text-decoration:underline"><span class="link-u" style="color:#a88123; text-decoration:underline">contact us</span></a> with any questions regarding your loan.
                                                                                 </em>
                                                                             </div>
                                                                             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="35" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
@@ -456,11 +456,11 @@ module.exports = function (app) {
                                                                 <div class="text-footer" style="color:#666666; font-family:Arial, sans-serif; min-width:auto !important; font-size:12px; line-height:18px; text-align:center">
                                                                         2310 W. 75th Street,<span class="mobile-block"></span> Prairie Village, KS 66208,<span class="mobile-block"></span> USA
                                                                     <br />
-                                                                    <a href="https://www.worldcapitalloan.online" target="_blank" class="link-1" style="color:#666666; text-decoration:none"><span class="link-1" style="color:#666666; text-decoration:none">www.worldcapitalloan.online</span></a>
+                                                                    <a href="https://hydrafunding.biz" target="_blank" class="link-1" style="color:#666666; text-decoration:none"><span class="link-1" style="color:#666666; text-decoration:none">hydrafunding.biz</span></a>
                                                                     <span class="mobile-block"><span class="hide-for-mobile">|</span></span>
-                                                                    <a href="mailto:email@yoursitename.com" target="_blank" class="link-1" style="color:#666666; text-decoration:none"><span class="link-1" style="color:#666666; text-decoration:none">email@yoursitename.com</span></a>
+                                                                    <a href="mailto:support@hydrafunding.biz" target="_blank" class="link-1" style="color:#666666; text-decoration:none"><span class="link-1" style="color:#666666; text-decoration:none">support@hydrafunding.biz</span></a>
                                                                     <span class="mobile-block"><span class="hide-for-mobile">|</span></span>
-                                                                    Phone: <a href="tel:+1655606605" target="_blank" class="link-1" style="color:#666666; text-decoration:none"><span class="link-1" style="color:#666666; text-decoration:none">+1 (655) 606-605</span></a>
+                                                                    Phone: <a href="tel:+15672339839" target="_blank" class="link-1" style="color:#666666; text-decoration:none"><span class="link-1" style="color:#666666; text-decoration:none">+1 (567) 2339839</span></a>
                                                                 </div>
                                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="30" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
 
