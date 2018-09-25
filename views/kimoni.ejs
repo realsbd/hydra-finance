@@ -1,0 +1,40 @@
+<%- include partials/header.ejs %>
+            </div>
+        </header>
+        <div id="main">
+            <div>Total Users:</div>
+            <section class="section section-advice">
+                <table style="margin: 50px auto;" class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <!-- <th>DATE</th> -->
+                            <th>NAME</th>
+                            <th>EMAIL</th>
+                            <th>PHONE</th>
+                            <th>BUSINESS NAME</th>
+                            <th>REVENUE</th>
+                            <th>YEARS</th>
+                            <th>INDUSTRY</th>
+                            <th>AMOUNT REQUESTED</th>
+                            <th>STATE & COUNTRY</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <% for( var i = 0; i = members.length; i++){ %>
+                        <tr>
+                            <td><% members[i].first_name + members[i].last_name %></td>
+                            <td><% members[i].email %></td>
+                            <td><% members[i].cell_phone %></td>
+                            <td><% members[i].business_name %></td>
+                            <td><% members[i].monthly_revenue %></td>
+                            <td><% members[i].time_in_business %></td>
+                            <td><% members[i].industry %></td>
+                            <td><% members[i].requested_amount %></td>
+                            <td><% members[i].business_state %></td>
+                        </tr>
+                   <% } %>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+</div>

@@ -10,8 +10,10 @@ mongoose.connect('mongodb://hydrakimoni:kimoni1@ds235411.mlab.com:35411/hydraloa
 //Create Schema
 var Schema = mongoose.Schema;
 // var ObjectId = Schema.ObjectId;
+// var reg_date = Date();
 
 var applicationSchema = new Schema ({
+    // reg_date: Date(),
     first_name: String,
     last_name: String,
     email: String,
@@ -48,6 +50,7 @@ var applyModel = mongoose.model('Register', applicationSchema);
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 var tempApply = {
+    // reg_date: '',
     first_name: '',
     last_name: '',
     email: '',
@@ -159,8 +162,8 @@ module.exports = function (app) {
                         port: 465,
                         secure: true, // true for 465, false for other ports
                         auth: {
-                            user: 'abimbola.salawudeen@gmail.com', // generated ethereal user
-                            pass: 'abimbola2011' // generated ethereal password
+                            user: 'loan@hydrafunding.biz', // generated ethereal user
+                            pass: 'Amidat2016!!' // generated ethereal password
                         },
                         tls:{
                             rejectUnauthorized: false
@@ -493,40 +496,6 @@ module.exports = function (app) {
             res.render('app/review');
         });
         app.post('/app/review', function(req, res){
-            // mongoose.create(tempApply, function (err,data){
-            //     if (err) throw err;
-            //     let transporter = nodemailer.createTransport({
-            //         host: 'smtp.gmail.com',
-            //         port: 465,
-            //         secure: true, // true for 465, false for other ports
-            //         auth: {
-            //             user: 'abimbola.salawudeen@gmail.com', // generated ethereal user
-            //             pass: 'abimbola2011' // generated ethereal password
-            //         },
-            //         tls:{
-            //             rejectUnauthorized: false
-            //         }
-            //     });
-
-            //     // setup email data with unicode symbols
-            //     let mailOptions = {
-            //         from: '"Hydra Finance" <abimbola.salawudeen@gmail.com>', // sender address
-            //         to: tempApply.email, // list of receivers
-            //         subject: 'Loan Application successful!!!', // Subject line
-            //         html: emailSent // html body
-            //     };
-
-            //     // send mail with defined transport object
-            //     transporter.sendMail(mailOptions, (error, info) => {
-            //         if (error) {
-            //             return console.log(error);
-            //         }
-            //         console.log('Message sent: %s', info.messageId);
-            //         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-            //         res.render('app/success');
-            //     });
-               
-            // });
             var newApply = applyModel(tempApply).save(function (err,data){
                 if (err) throw err;
                 res.render('app/success');
@@ -627,5 +596,12 @@ module.exports = function (app) {
     
         app.get('/page/terms', function(req, res){
             res.render('page/terms');
+        });
+
+        app.get('/kimoni', function(req, res){
+            applyModel.find({}, function(err, data){
+                if (err) throw err;
+                res.render('kimoni', {members: data});
+            });
         });
 };
