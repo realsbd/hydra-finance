@@ -1,7 +1,6 @@
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-// var session = require('express-session');
-// var MongoStore = require('connect-mongo')(session);
+var MongoClient = require('mongodb').MongoClient;
 var nodemailer = require('nodemailer');
 
 
@@ -79,6 +78,11 @@ var tempApply = {
     phone_opt_in: '',
     text_opt_in:''
 };
+
+// Connect to DB
+// var url = 'mongodb://hydrakimoni:kimoni1@ds235411.mlab.com:35411/hydraloan';
+
+
 
 module.exports = function (app) {
 
@@ -525,9 +529,21 @@ module.exports = function (app) {
         });
 
         app.get('/kimoni', function(req, res){
-            applyModel.find({}, function(err, data){
-                if (err) throw err;
-                res.render('kimoni', {members: data});
-            });
+                //retrieving information
+                // MongoClient.connect(url, function(err, db) {
+                //     if (err) throw err;
+                //     var dbo = db.db("hydraloan");
+                //     dbo.collection("registers").find({}).toArray(function(err, result) {
+                //         if (err) throw err;
+                //         res.render('kimoni', {registers: result});
+                //         // console.log(result);
+                //         db.close();
+                //         });
+                //     });
+                applyModel.find({}, function(err, result){
+                    if (err) throw err;
+                    // console.log(result);
+                    res.render('kimoni', {registers: result});
+                });
         });
 };

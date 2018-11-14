@@ -19,6 +19,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
+    "mongoclient": "^1.0.3",
     "mongoose": "^5.2.3",
     "nodemailer": "^4.6.7"
   }

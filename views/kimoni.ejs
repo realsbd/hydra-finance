@@ -1,28 +1,75 @@
-var template = require('../views/template-main');  
-var mongo_data = require('../model/mongoose-data');  
-exports.get = function(req, res) {  
-var strGroup = "D";
-mongo_data.teamlist(strGroup, function(err, teamlist) {
-    if (!err) {
-    var strTeam = "",
-        i = 0,
-        teamCount = teamlist.length;
-    for (i = 0; i < teamCount;) {
-        strTeam = strTeam + "<li>" + teamlist[i].country + "</li>";
-        i = i + 1;
-    }
-    strTeam = "<ul>" + strTeam + "</ul>"
-    res.writeHead(200, {
-        'Content-Type': 'text/html'
-    });
-    res.write(template.build("Test web page on node.js", "Hello there", "<p>The teams in Group " + strGroup + " for Euro 2012 are:</p>" + strTeam));
-    res.end();
-    } else {
-    res.writeHead(200, {
-        'Content-Type': 'text/html'
-    });
-    res.write(template.build("Oh dear", "Database error", "<p>Error details: " + err + "</p>"));
-    res.end();
-    }
-});
-};
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="google-site-verification" content="HQpF0qjEsfo2nXTfDK6GBhuIK4iXa_omG7K19KdhzfE" />
+    <title>Hydra | FUNDING</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/loanbuilder/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/loanbuilder/css/main.css">
+    <link rel="icon" type="image/png" href="/assets/loanbuilder/favicon.png" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127208683-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-127208683-1');
+        </script>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="col">first_name: </th>
+                <th class="col">last_name: </th>
+                <th class="col">email: </th>
+                <th class="col">cell_phone: </th>
+                <th class="col">business_name: </th>
+                <th class="col">monthly_revenue: </th>
+                <th class="col">time_in_business: </th>
+                <th class="col">industry: </th>
+                <th class="col">requested_amount: </th>
+               <th class="col"> business_address: </th>
+                <th class="col">business_city: </th>
+                <th class="col">business_state: </th>
+                <th class="col">business_zip: </th>
+                <th class="col">business_phone: </th>
+                <th class="col">company_structure: </th>
+                <th class="col">ownership_percent: </th>
+                <th class="col">ein: </th>
+                <th class="col">bank_routing_number: </th>
+                <th class="col">business_website: </th>
+            </tr>
+        </thead>
+        <tbody>
+                <% for (var i = 0; i < registers.length; i++) { %>
+            <tr>
+                    <td><%= registers[i].first_name %> </td>
+                    <td><%= registers[i].last_name %> </td>
+                    <td><%= registers[i].email %> </td>
+                    <td><%= registers[i].cell_phone %> </td>
+                    <td><%= registers[i].business_name %> </td>
+                    <td><%= registers[i].montdly_revenue %> </td>
+                    <td><%= registers[i].time_in_business %> </td>
+                    <td><%= registers[i].industry %> </td>
+                    <td><%= registers[i].requested_amount %> </td>
+                    <td><%= registers[i].business_address %> </td>
+                    <td><%= registers[i].business_city %> </td>
+                    <td><%= registers[i].business_state %> </td>
+                    <td><%= registers[i].business_zip %> </td>
+                    <td><%= registers[i].business_phone %> </td>
+                    <td><%= registers[i].company_structure %> </td>
+                    <td><%= registers[i].ownership_percent %> </td>
+                    <td><%= registers[i].ein %> </td>
+                    <td><%= registers[i].bank_routing_number %> </td>
+                    <td><%= registers[i].business_website %> </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>
