@@ -1,7 +1,6 @@
 var express = require('express');
 var ejs = require('ejs');
 var hydraController = require('./controllers/hydraController');
-var readController = require('./controllers/readController');
 // var session = require('express-session');
 // var MongoDBStore = require('connect-mongodb-session')(session);
 
